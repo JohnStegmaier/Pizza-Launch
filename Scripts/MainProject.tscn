@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ukmlw2vby414"]
+[gd_scene load_steps=12 format=3 uid="uid://ukmlw2vby414"]
 
 [ext_resource type="Texture2D" uid="uid://wqg32hkv068" path="res://PizzaGuy.png" id="1_3cae4"]
 [ext_resource type="Script" uid="uid://cn8rflrng4vef" path="res://Scripts/PizzaGuyMove.gd" id="2_4e2ua"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://ciuk8jvdmcn6a" path="res://Scripts/CheeseEmitter.gd" id="6_68ewt"]
 [ext_resource type="Texture2D" uid="uid://csykdswnd7556" path="res://Parm_Chef_Stroke-removebg-preview.png" id="7_u55yp"]
 [ext_resource type="AudioStream" uid="uid://yf1wc3s6v5ev" path="res://Spaghetti Music.mp3" id="8_4e2ua"]
+[ext_resource type="Texture2D" uid="uid://ciqxpclxbi1aq" path="res://Scripts/empty-wood-table-png.png" id="10_dggcb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vtpo"]
 size = Vector2(196.951, 153)
@@ -20,6 +21,7 @@ position = Vector2(512, 384)
 metadata/_edit_lock_ = true
 
 [node name="PizzaGuy" type="StaticBody2D" parent="."]
+z_index = 2
 position = Vector2(-53, -52)
 scale = Vector2(1.13926, 1.13926)
 
@@ -34,6 +36,7 @@ region_rect = Rect2(0, 0, 453, 291.176)
 script = ExtResource("2_4e2ua")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaGuy"]
+z_index = 9
 position = Vector2(43, 317)
 rotation = -0.226893
 shape = SubResource("RectangleShape2D_3vtpo")
@@ -82,3 +85,10 @@ position = Vector2(0, 3.05176e-05)
 stream = ExtResource("8_4e2ua")
 volume_db = -80.0
 autoplay = true
+
+[node name="Empty-wood-table-png" type="Sprite2D" parent="."]
+z_index = 1
+z_as_relative = false
+position = Vector2(-27, 140)
+scale = Vector2(0.492408, 0.687636)
+texture = ExtResource("10_dggcb")
