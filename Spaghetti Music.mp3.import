@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yf1wc3s6v5ev"
+path="res://.godot/imported/Spaghetti Music.mp3-74923cbf565a9b2d6c052f5aada91df9.mp3str"
+
+[deps]
+
+source_file="res://Spaghetti Music.mp3"
+dest_files=["res://.godot/imported/Spaghetti Music.mp3-74923cbf565a9b2d6c052f5aada91df9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

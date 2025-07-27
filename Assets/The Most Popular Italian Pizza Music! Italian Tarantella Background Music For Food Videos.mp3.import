@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drd56xmeq1jkx"
+path="res://.godot/imported/The Most Popular Italian Pizza Music! Italian Tarantella Background Music For Food Videos.mp3-6186db2475346f2fea220e955926f0a0.mp3str"
+
+[deps]
+
+source_file="res://Assets/The Most Popular Italian Pizza Music! Italian Tarantella Background Music For Food Videos.mp3"
+dest_files=["res://.godot/imported/The Most Popular Italian Pizza Music! Italian Tarantella Background Music For Food Videos.mp3-6186db2475346f2fea220e955926f0a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
