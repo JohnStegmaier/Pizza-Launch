@@ -26,6 +26,7 @@ scale = Vector2(5.32861, 5.32861)
 shape = SubResource("CircleShape2D_hpe48")
 
 [node name="DespawnTimer" type="Timer" parent="."]
+wait_time = 1.8
 one_shot = true
 autostart = true
 
