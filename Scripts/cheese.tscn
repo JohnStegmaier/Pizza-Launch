@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://clxl630d3cdib"]
+
+[ext_resource type="Texture2D" uid="uid://1f1kcctj0v0c" path="res://Cheese1.png" id="1_5nple"]
+[ext_resource type="Script" uid="uid://bfnkc86sro45s" path="res://Scripts/cheese.gd" id="1_illxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_illxs"]
+size = Vector2(21, 108.5)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 2.874
+
+[node name="Cheese" type="Node2D" parent="."]
+script = ExtResource("1_illxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cheese"]
+position = Vector2(-2.62626, 3.36364)
+rotation = -0.129389
+scale = Vector2(0.350168, 0.350168)
+shape = SubResource("RectangleShape2D_illxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cheese/CollisionShape2D"]
+position = Vector2(8.30824, -5.72587)
+rotation = 0.129388
+scale = Vector2(0.861111, 0.861111)
+texture = ExtResource("1_5nple")
+
+[node name="DespawnTimer" type="Timer" parent="Cheese"]
+wait_time = 1.2
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Cheese/DespawnTimer" to="Cheese" method="_on_despawn_timer_timeout"]

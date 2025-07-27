@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://ukmlw2vby414"]
+
+[ext_resource type="Texture2D" uid="uid://wqg32hkv068" path="res://PizzaGuy.png" id="1_3cae4"]
+[ext_resource type="Script" uid="uid://cn8rflrng4vef" path="res://Scripts/PizzaGuyMove.gd" id="2_4e2ua"]
+[ext_resource type="Texture2D" uid="uid://cd44ev5iel0le" path="res://PepperoniGuy.png" id="3_bp67b"]
+[ext_resource type="Texture2D" uid="uid://du0p4qgcnpn5x" path="res://amber-williams-bg-pizza-rest-big.jpg" id="4_uty1r"]
+[ext_resource type="Texture2D" uid="uid://dwpc3oji1nlns" path="res://Peggle.png" id="5_vmgde"]
+[ext_resource type="Script" uid="uid://cnlagc0j668i1" path="res://Scripts/PepEmitter.gd" id="6_4e2ua"]
+[ext_resource type="Script" uid="uid://ciuk8jvdmcn6a" path="res://Scripts/CheeseEmitter.gd" id="6_68ewt"]
+[ext_resource type="Texture2D" uid="uid://csykdswnd7556" path="res://Parm_Chef_Stroke-removebg-preview.png" id="7_u55yp"]
+[ext_resource type="AudioStream" uid="uid://yf1wc3s6v5ev" path="res://Spaghetti Music.mp3" id="8_4e2ua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vtpo"]
+size = Vector2(196.951, 153)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(512, 384)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="PizzaGuy" type="StaticBody2D" parent="."]
+position = Vector2(-53, -52)
+scale = Vector2(1.13926, 1.13926)
+
+[node name="PizzaGuy2" type="Sprite2D" parent="PizzaGuy"]
+position = Vector2(27, 300)
+rotation = -0.226893
+scale = Vector2(0.480793, 0.662937)
+texture = ExtResource("1_3cae4")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 453, 291.176)
+script = ExtResource("2_4e2ua")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaGuy"]
+position = Vector2(43, 317)
+rotation = -0.226893
+shape = SubResource("RectangleShape2D_3vtpo")
+
+[node name="PepChef" type="StaticBody2D" parent="."]
+position = Vector2(-480, -170)
+rotation = 0.176887
+scale = Vector2(0.268, 0.268)
+script = ExtResource("6_4e2ua")
+
+[node name="PepperoniGuy" type="Sprite2D" parent="PepChef"]
+visibility_layer = 512
+position = Vector2(3172.46, -191.837)
+rotation = -0.429623
+scale = Vector2(1.98295, 1.98295)
+texture = ExtResource("3_bp67b")
+flip_h = true
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.31802, 0.31802, 0.31802, 1)
+z_index = -1
+z_as_relative = false
+position = Vector2(-138, 82)
+scale = Vector2(1.3747, 1.29721)
+texture = ExtResource("4_uty1r")
+metadata/_edit_lock_ = true
+
+[node name="Peggle" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(7.56979e-06, -0.999996)
+scale = Vector2(1.27321, 1.27746)
+texture = ExtResource("5_vmgde")
+metadata/_edit_lock_ = true
+
+[node name="ParmChef" type="StaticBody2D" parent="."]
+script = ExtResource("6_68ewt")
+
+[node name="ParmChefStroke-removebg-preview" type="Sprite2D" parent="ParmChef"]
+position = Vector2(-341, -90)
+rotation = 0.423073
+scale = Vector2(0.679098, 0.679098)
+texture = ExtResource("7_u55yp")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 3.05176e-05)
+stream = ExtResource("8_4e2ua")
+volume_db = -80.0
+autoplay = true
