@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1024
 window/size/viewport_height=768
 
+[dotnet]
+
+project/assembly_name="Pizza_Launch"
+
 [physics]
 
 2d/default_gravity=380.0
