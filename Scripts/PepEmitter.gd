@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var pepperoni_scene: PackedScene
-@export var emit_interval: float = 0.06
+@export var emit_interval: float = 0.0001
 @export var arc_speed_range := Vector2(800, 1000)
 @export var arc_angle_range := Vector2(-90, -60) # slight randomness
 

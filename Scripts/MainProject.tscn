@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://ukmlw2vby414"]
 
-[ext_resource type="Texture2D" uid="uid://wqg32hkv068" path="res://PizzaGuy.png" id="1_3cae4"]
+[ext_resource type="Texture2D" uid="uid://bhvgim2c3u26x" path="res://Assets/Brother Gustov/Gustov.png" id="1_dggcb"]
 [ext_resource type="Script" uid="uid://cn8rflrng4vef" path="res://Scripts/PizzaGuyMove.gd" id="2_4e2ua"]
 [ext_resource type="Texture2D" uid="uid://cd44ev5iel0le" path="res://PepperoniGuy.png" id="3_bp67b"]
 [ext_resource type="Texture2D" uid="uid://du0p4qgcnpn5x" path="res://amber-williams-bg-pizza-rest-big.jpg" id="4_uty1r"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ciqxpclxbi1aq" path="res://Scripts/empty-wood-table-png.png" id="10_dggcb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vtpo"]
-size = Vector2(196.951, 153)
+size = Vector2(240.291, 387.971)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(512, 384)
@@ -27,18 +27,15 @@ scale = Vector2(1.13926, 1.13926)
 
 [node name="PizzaGuy2" type="Sprite2D" parent="PizzaGuy"]
 position = Vector2(27, 300)
-rotation = -0.226893
-scale = Vector2(0.480793, 0.662937)
-texture = ExtResource("1_3cae4")
-flip_h = true
+texture = ExtResource("1_dggcb")
 region_enabled = true
-region_rect = Rect2(0, 0, 453, 291.176)
+region_rect = Rect2(0, 0, 231.167, 393.833)
 script = ExtResource("2_4e2ua")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaGuy"]
 z_index = 9
-position = Vector2(43, 317)
-rotation = -0.226893
+position = Vector2(19.4186, 301.073)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3vtpo")
 
 [node name="PepChef" type="StaticBody2D" parent="."]
