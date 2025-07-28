@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://ukmlw2vby414"]
 
-[ext_resource type="Texture2D" uid="uid://wqg32hkv068" path="res://PizzaGuy.png" id="1_3cae4"]
+[ext_resource type="Texture2D" uid="uid://i5l0jh0q2rn0" path="res://Scripts/Gustav.png" id="1_dggcb"]
 [ext_resource type="Script" uid="uid://cn8rflrng4vef" path="res://Scripts/PizzaGuyMove.gd" id="2_4e2ua"]
 [ext_resource type="Texture2D" uid="uid://cd44ev5iel0le" path="res://PepperoniGuy.png" id="3_bp67b"]
 [ext_resource type="Texture2D" uid="uid://du0p4qgcnpn5x" path="res://amber-williams-bg-pizza-rest-big.jpg" id="4_uty1r"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ciqxpclxbi1aq" path="res://Scripts/empty-wood-table-png.png" id="10_dggcb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vtpo"]
-size = Vector2(196.951, 153)
+size = Vector2(184.33, 324.772)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(512, 384)
@@ -26,19 +26,15 @@ position = Vector2(-53, -52)
 scale = Vector2(1.13926, 1.13926)
 
 [node name="PizzaGuy2" type="Sprite2D" parent="PizzaGuy"]
-position = Vector2(27, 300)
-rotation = -0.226893
-scale = Vector2(0.480793, 0.662937)
-texture = ExtResource("1_3cae4")
-flip_h = true
-region_enabled = true
+position = Vector2(-18.433, 233.485)
+scale = Vector2(0.832185, 0.933934)
+texture = ExtResource("1_dggcb")
 region_rect = Rect2(0, 0, 453, 291.176)
 script = ExtResource("2_4e2ua")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaGuy"]
 z_index = 9
-position = Vector2(43, 317)
-rotation = -0.226893
+position = Vector2(-20.1886, 217.685)
 shape = SubResource("RectangleShape2D_3vtpo")
 
 [node name="PepChef" type="StaticBody2D" parent="."]
@@ -66,10 +62,9 @@ metadata/_edit_lock_ = true
 
 [node name="Peggle" type="Sprite2D" parent="."]
 z_index = 3
-position = Vector2(7.56979e-06, -0.999996)
-scale = Vector2(1.27321, 1.27746)
+position = Vector2(8.10623e-06, 3.57628e-06)
+scale = Vector2(1.29, 1.287)
 texture = ExtResource("5_vmgde")
-metadata/_edit_lock_ = true
 
 [node name="ParmChef" type="StaticBody2D" parent="."]
 script = ExtResource("6_68ewt")
