@@ -20,7 +20,7 @@ jobs:
 
     strategy:
       matrix:
-        platform: [windows, linux]
+        platform: [Windows, Linux]
 
     container:
       image: barichello/godot-ci:${{ vars.GODOT_VERSION }}
@@ -54,4 +54,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.platform }}-build
-        path: build/${{ matrix.platform }}
+        path: Build/${{ matrix.platform }}
