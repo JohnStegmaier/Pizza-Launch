@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Pizza_Launch"
+config/version="0.0.1-SNAPSHOT"
 run/main_scene="uid://ukmlw2vby414"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
