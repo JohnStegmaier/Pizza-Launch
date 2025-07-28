@@ -44,7 +44,7 @@ jobs:
         pwd && ls -lah
         ls -lah build/
         cd ${{ env.PROJECT_PATH }}
-        if [ "${{ matrix.platform }}" = "windows" ]; then
+        if [ "${{ matrix.platform }}" = "Windows" ]; then
           godot --headless --verbose --export-release "Windows Desktop" "Builds/Windows/Pizza_Launch.exe"
         else
           godot --headless --verbose --export-release "Linux" "Builds/Linux/Pizza_Launch.x86_64"
