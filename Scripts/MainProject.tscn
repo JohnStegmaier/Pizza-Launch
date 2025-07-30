@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ukmlw2vby414"]
+[gd_scene load_steps=14 format=3 uid="uid://ukmlw2vby414"]
 
 [ext_resource type="Texture2D" uid="uid://bhvgim2c3u26x" path="res://Assets/Brother Gustov/Gustov.png" id="1_dggcb"]
 [ext_resource type="Script" uid="uid://cn8rflrng4vef" path="res://Scripts/PizzaGuyMove.gd" id="2_4e2ua"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://csykdswnd7556" path="res://Parm_Chef_Stroke-removebg-preview.png" id="7_u55yp"]
 [ext_resource type="AudioStream" uid="uid://yf1wc3s6v5ev" path="res://Spaghetti Music.mp3" id="8_4e2ua"]
 [ext_resource type="Texture2D" uid="uid://ciqxpclxbi1aq" path="res://Scripts/empty-wood-table-png.png" id="10_dggcb"]
+[ext_resource type="Script" uid="uid://c4pfqamodep21" path="res://Scripts/pizza.gd" id="11_6l8i5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl138"]
+size = Vector2(282, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vtpo"]
 size = Vector2(240.291, 387.971)
@@ -19,24 +23,6 @@ position = Vector2(512, 384)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 metadata/_edit_lock_ = true
-
-[node name="PizzaGuy" type="StaticBody2D" parent="."]
-z_index = 2
-position = Vector2(-53, -52)
-scale = Vector2(1.13926, 1.13926)
-
-[node name="PizzaGuy2" type="Sprite2D" parent="PizzaGuy"]
-position = Vector2(27, 300)
-texture = ExtResource("1_dggcb")
-region_enabled = true
-region_rect = Rect2(0, 0, 231.167, 393.833)
-script = ExtResource("2_4e2ua")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaGuy"]
-z_index = 9
-position = Vector2(19.4186, 301.073)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_3vtpo")
 
 [node name="PepChef" type="StaticBody2D" parent="."]
 position = Vector2(-480, -170)
@@ -84,8 +70,37 @@ volume_db = -80.0
 autoplay = true
 
 [node name="Empty-wood-table-png" type="Sprite2D" parent="."]
+visibility_layer = 2
 z_index = 1
 z_as_relative = false
 position = Vector2(-27, 140)
 scale = Vector2(0.492408, 0.687636)
 texture = ExtResource("10_dggcb")
+
+[node name="Pizza" type="CharacterBody2D" parent="."]
+z_index = 2
+script = ExtResource("11_6l8i5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza"]
+shape = SubResource("RectangleShape2D_sl138")
+
+[node name="Pizza Shape" type="Polygon2D" parent="Pizza"]
+position = Vector2(0, 148)
+polygon = PackedVector2Array(-141, -156, -141, -140, 141, -140, 141, -156)
+
+[node name="Pizza Guy" type="CharacterBody2D" parent="."]
+z_index = 2
+script = ExtResource("2_4e2ua")
+
+[node name="PizzaGuy2" type="Sprite2D" parent="Pizza Guy"]
+position = Vector2(-22.24, 289.778)
+scale = Vector2(1.13926, 1.13926)
+texture = ExtResource("1_dggcb")
+region_enabled = true
+region_rect = Rect2(0, 0, 231.167, 393.833)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza Guy"]
+z_index = 9
+position = Vector2(-30.8772, 291)
+scale = Vector2(1.13926, 1.13926)
+shape = SubResource("RectangleShape2D_3vtpo")
